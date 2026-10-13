@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamel Nabil × Alpaca · Take-home</title>
+<meta name="description" content="Kamel Nabil's Alpaca product take-home: biggest achievement and B2C revenue analysis, as an interactive story.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0B'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='800' font-size='26' text-anchor='middle' fill='%23FCD535'%3EKN%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div id="dash-root">
+<div class="nb" id="nb" data-theme="light">
+  <header class="nb-top">
+    <nav class="crumbs" aria-label="Where you are"></nav>
+    <div class="tools">
+      <button class="tbtn btn-collapse" title="Collapse all (Esc)">Collapse all</button>
+      <div class="seg" role="group" aria-label="Theme"><button data-theme-set="light">Light</button><button data-theme-set="dark">Dark</button></div>
+    </div>
+  </header>
+  <div class="nb-prog"><i></i></div>
+  <div class="cover" id="cover">
+    <div class="cover-chart" id="cover-chart" data-source="rev_monthly"></div>
+    <div class="cover-tag">Monthly B2C revenue <b><b class="f" data-source="facts" data-field="display" data-where="id=rev_growth_x">—</b></b></div>
+  </div>
+  <main class="page" id="page">
+    <div class="p-icon" aria-hidden="true">KN</div>
+    <h1 class="p-title">[Kamel Nabil] Alpaca Challenge</h1>
+    <p class="p-sub">Documenting my thought process; How I think and reach conclusions.</p>
+    <p class="p-hint"><span><kbd>→</kbd>open the next section</span><span><kbd>←</kbd>go back</span><span><kbd>Esc</kbd>collapse all</span><span>or click any toggle</span></p>
+    <hr class="p-hr">
+<div class="tg tg-l1" id="p1"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Part 1</b>: Achievement</span></button><div class="tg-b"><div class="tg-in">
+  <p class="intro">I chose one of the recent achievements that is related to the wealth-tech industry.<br>Taking IPO subscriptions at Awaed from a stuck, never launched product to a live, end to end experience in <b class="hl"><b class="f" data-source="facts" data-field="display" data-where="id=ipo_weeks">—</b></b>.</p>
+
+  <div class="tg tg-l2" id="ctx"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Context &amp; Problem</span></button><div class="tg-b"><div class="tg-in">
+    <div class="stack">
+      <div>
+        <p class="sub">Context</p>
+        <ul class="bl">
+          <li>Awaed is a Saudi WealthTech platform offering retail investing across Saudi/US markets.</li>
+          <li>IPOs are one of the biggest moments for Saudi retail investors, and a natural way to bring new investors in.</li>
+          <li>This was my first major challenge in WealthTech, in a market and a regulatory setup I had never worked in before.</li>
+        </ul>
+      </div>
+      <div>
+        <p class="sub">Problem</p>
+        <ul class="bl">
+          <li>The IPO product idea existed, but it had <b>never been launched</b>.</li>
+          <li>Running an IPO touches Tadawul, compliance, the CMA's rules, trading operations, the brokerage infrastructure, engineering, product design, and finally the user.</li>
+          <li>Each team held one piece of the story. <b>No one held it end to end.</b></li>
+          <li>Tadawul's subscription file specs alone had dozens of fields, rejection codes, and several reconciliation reports.</li>
+          <li>There was <b>no senior product ownership</b> to bridge the gaps, identify the problem, define it into phases, and turn it into something shippable.</li>
+        </ul>
+      </div>
+    </div>
+    <figure class="embed">
+      <div class="orbit">
+        <svg class="orbit-svg" viewBox="0 0 600 420" width="100%" aria-hidden="true"><g class="orbit-links"></g></svg>
+        <div class="orbit-core"><span class="core-k">End-to-end owner</span><span class="core-v">Kamel</span></div>
+        <span class="node">Tadawul</span><span class="node">Compliance</span><span class="node">CMA rules</span><span class="node">Trading operations</span><span class="node">Brokerage infrastructure</span><span class="node">Engineering</span><span class="node">Product design</span><span class="node node-user">The user</span>
+      </div>
+      <figcaption>Each team held one piece of the story. The gaps sat between them.</figcaption>
+    </figure>
+  </div></div></div>
+
+  <div class="tg tg-l2" id="role"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">My Role &amp; Ownership</span></button><div class="tg-b"><div class="tg-in">
+    <p class="intro">I owned it end to end, from understanding the problem to getting it live.</p>
+    <div class="tg tg-l3" id="role-steps"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">I followed 5 steps to go live</span></button><div class="tg-b"><div class="tg-in">
+      <ol class="steps5">
+        <li><span class="s-n">1</span><b>Go to the source</b><span>I flew to Riyadh and sat with each team, one by one.</span></li>
+        <li><span class="s-n">2</span><b>Walk the process from every angle</b><span>Compliance, business, trading operations, Tadawul, engineering and design.</span></li>
+        <li><span class="s-n">3</span><b>Map one end-to-end journey</b><span>Users and operations on the same page, from prospectus to listing.</span></li>
+        <li><span class="s-n">4</span><b>Define a shippable scope</b><span>Together with engineering.</span></li>
+        <li><span class="s-n">5</span><b>Launch and stabilize</b><span>Stay with the teams until every issue was resolved.</span></li>
+      </ol>
+      <div class="own"><span>Ownership</span><div class="own-bar"><i></i></div><b>End to end</b></div>
+    </div></div></div>
+    <div class="tg tg-l3" id="role-journey"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">The journey I mapped</span></button><div class="tg-b"><div class="tg-in">
+      <p class="intro">A clean version of my working whiteboard, connecting every team in one flow.</p>
+      <figure class="embed embed-wide">
+        <div class="lanes">
+          <div class="lane-l" style="grid-row:1">User</div><div class="lane-l" style="grid-row:2">Awaed app</div><div class="lane-l" style="grid-row:3">Operations</div><div class="lane-l" style="grid-row:4">Tadawul</div>
+          <div class="lane-bg" style="grid-row:1"></div><div class="lane-bg" style="grid-row:2"></div><div class="lane-bg" style="grid-row:3"></div><div class="lane-bg" style="grid-row:4"></div>
+          <div class="jn" style="--c:1;--r:3;--k:0">Receive IPO prospectus</div>
+          <div class="jn" style="--c:2;--r:3;--k:1">Create IPO data + status</div>
+          <div class="jn" style="--c:3;--r:2;--k:2">Open IPO, users notified</div>
+          <div class="jn jn-hi" style="--c:4;--r:1;--k:3">User subscribes, money on hold</div>
+          <div class="jn" style="--c:5;--r:2;--k:4">Every 2 hours, export subscriptions</div>
+          <div class="jn" style="--c:6;--r:3;--k:5">Trading ops upload file to Tadawul</div>
+          <div class="jn jn-q" style="--c:7;--r:4;--k:6">Tadawul result</div>
+          <div class="jn" style="--c:8;--r:1;--k:7">Accepted, or Rejected and money released</div>
+          <div class="jn" style="--c:9;--r:4;--k:8">IPO closes, allocation file received</div>
+          <div class="jn" style="--c:10;--r:3;--k:9">Allocations pushed to user accounts</div>
+          <div class="jn jn-hi" style="--c:11;--r:1;--k:10">Full, partial or none: shares added, the rest released</div>
+          <div class="jn" style="--c:12;--r:4;--k:11">Listing on exchange</div>
+          <svg class="lanes-svg" aria-hidden="true"></svg>
+        </div>
+      </figure>
+    </div></div></div>
+  </div></div></div>
+
+  <div class="tg tg-l2" id="dec"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">My Key Decisions &amp; Principles</span></button><div class="tg-b"><div class="tg-in">
+    <p class="intro">I recall 5 decision moments where I chose one path over another, and had principles behind each.</p>
+    <div class="tg tg-l3" id="dec-1"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Decision 1:</b> Understand the whole process before defining anything</span></button><div class="tg-b"><div class="tg-in">
+      <dl class="dl"><dt>What I did</dt><dd>Went to Riyadh and sat with each team before writing a single requirement.</dd>
+      <dt>The alternative</dt><dd>Collect requirements remotely and stitch documents together.</dd>
+      <dt>Why I didn't</dt><dd>Each team only knew its own piece. The gaps sat <em>between</em> the teams, and they only show up when you walk the full process.</dd></dl>
+      <blockquote class="principle">Go to the source. The real problem lives where the work happens.</blockquote>
+    </div></div></div>
+    <div class="tg tg-l3" id="dec-2"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Decision 2:</b> Ship the smallest version that is real and compliant</span></button><div class="tg-b"><div class="tg-in">
+      <dl class="dl"><dt>What I did</dt><dd>Instead of waiting for a fully automated Tadawul integration, we launched with a <b>file exchange every 2 hours</b>, run by trading operations, who already had Tadawul access.</dd>
+      <dt>The trade-off</dt><dd>Some manual work for operations, in exchange for going live in weeks, not months.</dd>
+      <dt>What I refused to cut</dt><dd>Anything compliance or Tadawul required.</dd></dl>
+      <blockquote class="principle">Scope is the lever. Compliance and correctness are not.</blockquote>
+    </div></div></div>
+    <div class="tg tg-l3" id="dec-3"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Decision 3:</b> Design for operations, not only for users</span></button><div class="tg-b"><div class="tg-in">
+      <dl class="dl"><dt>What I did</dt><dd>Mapped the operations journey with the same care as the user journey: who creates the IPO, who exports and uploads files, who pushes allocations, and what happens when Tadawul rejects a subscription.</dd>
+      <dt>Why</dt><dd>A beautiful app is worthless if the back office can't run the process reliably every 2 hours.</dd></dl>
+      <blockquote class="principle">Operations is a user too. If the back office breaks, the experience breaks.</blockquote>
+    </div></div></div>
+    <div class="tg tg-l3" id="dec-4"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Decision 4:</b> Hide the complexity, never the facts</span></button><div class="tg-b"><div class="tg-in">
+      <dl class="dl"><dt>Simple statuses</dt><dd>Tadawul returns many result codes and reports. Users see a few clear statuses, each with a notification:</dd></dl>
+      <div class="status-flow"><span>Received</span><i></i><span>Accepted or Rejected</span><i></i><span>Fully or Partially Allocated</span><i></i><span>Cancelled</span></div>
+      <dl class="dl"><dt>Money held, not taken</dt><dd>The amount is <b>held</b> at subscription. After allocation, we deduct only what was allocated and <b>release the rest automatically</b>.</dd></dl>
+      <blockquote class="principle">Users should always know where their money is, without needing to understand how an exchange works.</blockquote>
+    </div></div></div>
+    <div class="tg tg-l3" id="dec-5"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Decision 5:</b> Scale in phases</span></button><div class="tg-b"><div class="tg-in">
+      <p class="intro">Once the Saudi flow worked end to end, I took the same model to the US market. The journey was familiar; the infrastructure was not.</p>
+      <div class="tg tg-l4" id="dec-5-c"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">The constraints</span></button><div class="tg-b"><div class="tg-in">
+        <div class="cons">
+          <div class="con"><b>Omnibus account</b><span>Every order goes through one Awaed account. The provider sees one investor, while we hold many individual subscriptions.</span></div>
+          <div class="con"><b>Limited allocation flexibility</b><span>We receive one combined allocation and final price, and have to divide it among our users ourselves.</span></div>
+          <div class="con"><b>New market rules</b><span>Price ranges instead of fixed prices, FINRA Rules 5130 &amp; 5131 attestation, USD offerings for SAR-based users, and lock-up rules after allocation.</span></div>
+          <div class="con con-hot"><b>The real dilemma</b><span>A fully digital integration would take months. A manual flow could go live in weeks.</span></div>
+        </div>
+      </div></div></div>
+      <div class="tg tg-l4" id="dec-5-call"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">My call: two approaches, not one</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">I split the problem in two, so speed and scale didn't have to compete.</p>
+        <div class="vs">
+          <div class="vs-col vs-a"><p class="sub">Approach 1 · Manual Ops Flow (MVP)</p><h4>Go live fast and learn</h4><p>Reuse the Saudi product with small changes; operations handle the provider steps manually.</p><p class="muted">Engineering scope: market setting per IPO, US tab, price ranges.</p><p class="big-inline">Live in <b class="f" data-source="facts" data-field="display" data-where="id=us_weeks">—</b></p></div>
+          <div class="vs-x">+</div>
+          <div class="vs-col"><p class="sub">Approach 2 · Digital Integration</p><h4>Scale without manual work</h4><p>Integrate with an IPO provider's API end to end, run from an admin portal.</p><p class="muted">Engineering scope: IPO fetching, review and publishing, order aggregation, allocation engine, audit.</p><p class="big-inline">Phased roadmap, each phase releasable on its own</p></div>
+        </div>
+      </div></div></div>
+      <div class="tg tg-l4" id="dec-5-v"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Versioning the experience</span></button><div class="tg-b"><div class="tg-in">
+        <div class="versions">
+          <div><b>V0</b><span>Market and price-range differentiation, USD to SAR conversion, clear wallet states</span></div>
+          <div><b>V1</b><span>Subscription by value, attestation, validations and error handling</span></div>
+          <div><b>V2</b><span>Education, timeline updates, editing orders until cutoff, postponement and cancellation handling, lock-up countdown</span></div>
+          <div><b>V3</b><span>IPO calendar and advanced order rules</span></div>
+        </div>
+      </div></div></div>
+      <blockquote class="principle">Ship manually to learn, then digitize what's proven. Speed and scale don't have to compete.</blockquote>
+    </div></div></div>
+  </div></div></div>
+
+  <div class="tg tg-l2" id="eng"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Working With Engineering</span></button><div class="tg-b"><div class="tg-in">
+    <div class="tiles">
+      <div class="tile"><span class="tile-n">01</span><b>Translated the exchange's language into engineering language</b><p>I turned Tadawul's file specification into a field-by-field mapping for engineers, showing how each calculated field is computed.</p></div>
+      <div class="tile"><span class="tile-n">02</span><b>Defined the contract between systems</b><p>The subscription and allocation statuses, and exactly what each one triggers: hold, deduct, release, notify.</p></div>
+      <div class="tile"><span class="tile-n">03</span><b>Unblocked daily</b><p>Worked through blockers with the engineers day by day, making scope calls on the spot so we never stopped moving.</p></div>
+      <div class="tile"><span class="tile-n">04</span><b>Connected engineering directly with trading operations</b><p>So the file loop could be tested end to end before going live.</p></div>
+      <div class="tile"><span class="tile-n">05</span><b>Stayed through launch</b><p>Until every issue that came up was resolved.</p></div>
+    </div>
+  </div></div></div>
+
+  <div class="tg tg-l2" id="impact"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">The Impact</span></button><div class="tg-b"><div class="tg-in">
+    <div class="kpis kpis-3">
+      <div class="kpi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=ipo_weeks_n">—</b></span><span class="kpi-l">weeks from never launched to live, with a fully digital journey from subscription to allocation</span></div>
+      <div class="kpi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=ipo_count">—</b></span><span class="kpi-l">IPOs in the first two quarters, all running on the same journey</span></div>
+      <div class="kpi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=ipo_alloc">—</b></span><span class="kpi-l">successful allocation</span></div>
+      <div class="kpi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=ipo_sar_total">—</b></span><span class="kpi-l">subscribed (<b class="f" data-source="facts" data-field="display" data-where="id=ipo_usd_total">—</b>): SAR <b data-source="ipo_quarters" data-field="subscribed_sar_m" data-where="quarter=Q3">—</b>M in Q3 and <b data-source="ipo_quarters" data-field="subscribed_sar_m" data-where="quarter=Q4">—</b>M in Q4. The gap between the two quarters is due to a large single IPO in Q3.</span></div>
+      <div class="kpi kpi-hi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=ipo_investors">—</b></span><span class="kpi-l">investors, all first-timers, new to Awaed. An acquisition engine.</span></div>
+      <div class="kpi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=ipo_q3_first">—</b></span><span class="kpi-l">first-timers in Q3 generated nearly all of the <b class="f" data-source="facts" data-field="display" data-where="id=ipo_q3_sar">—</b></span></div>
+    </div>
+  </div></div></div>
+</div></div></div>
+
+<div class="tg tg-l1" id="p2"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Part 2</b>: Data Analysis</span></button><div class="tg-b"><div class="tg-in">
+  <p class="intro">I broke down what is required in the task into kind of step by step points,<br>so I can clearly show how I reached any conclusion.</p>
+
+  <div class="tg tg-l2" id="appr"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">My Approach</span></button><div class="tg-b"><div class="tg-in">
+    <p class="intro">The steps I followed, so every conclusion can be traced back to the data.</p>
+    <div class="method">
+      <div class="m-step" data-open="appr-clean"><span>1</span><b>Understand &amp; clean</b></div>
+      <div class="m-step" data-open="appr-dec"><span>2</span><b>Decompose revenue</b></div>
+      <div class="m-step" data-open="appr-seg"><span>3</span><b>Segment accounts</b></div>
+      <div class="m-step" data-open="appr-vol"><span>4</span><b>Volatility &amp; correlation</b></div>
+      <div class="m-step" data-open="appr-ctx"><span>5</span><b>Alpaca context</b></div>
+      <div class="m-step m-out" data-open="out"><span>→</span><b>The Outcome</b></div>
+    </div>
+
+    <div class="tg tg-l3" id="appr-clean"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Understand &amp; clean data</span></button><div class="tg-b"><div class="tg-in">
+      <div class="kpis kpis-sm">
+        <div class="kpi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=rows_total">—</b></span><span class="kpi-l">rows: 1 account × 1 month</span></div>
+        <div class="kpi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=accounts_total">—</b></span><span class="kpi-l">unique accounts, May 23 – Apr 25</span></div>
+        <div class="kpi"><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=dupes">—</b></span><span class="kpi-l">duplicate account-months</span></div>
+      </div>
+      <div class="checks">
+        <div class="check"><i class="ok"></i><div><b>I made sure no duplicate account.</b></div></div>
+        <div class="check"><i class="cut"></i><div><b>I found a duplicate column and dropped it</b><span><code>crypto_wallet_revenue</code> appears twice with identical values.</span></div></div>
+        <div class="check"><i class="keep"></i><div><b>I found negative values and kept as reported</b><span><b class="f" data-source="facts" data-field="display" data-where="id=neg_count">—</b> values (<b class="f" data-source="facts" data-field="display" data-where="id=neg_sum">—</b>), treated as rebates or adjustments.</span></div></div>
+        <div class="check"><i class="assume"></i><div><b>I didn't find a currency label and assumed it US dollars.</b></div></div>
+      </div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="appr-dec"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Decompose revenue</span></button><div class="tg-b"><div class="tg-in">
+      <p class="intro">I decomposed the revenue from 3 angles:</p>
+      <div class="tg tg-l4" id="dec-stream"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Revenue by stream</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">All accounts, <b class="f" data-source="facts" data-field="display" data-where="id=months_n">—</b> months (May 23 – Apr 25).</p>
+        <table class="tbl" id="tbl-streams" data-source="streams" data-row-key="stream">
+          <thead><tr><th data-field="label">Stream</th><th data-source="stream_shares" data-field="share_24m">Share of 24-month revenue</th><th data-field="live_since">Live since</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p class="note">Total: <b><b class="f" data-source="facts" data-field="display" data-where="id=rev_24m">—</b></b> over 24 months.</p>
+        <div class="callout"><span class="co-i">◆</span><div><b>Key component: 2</b> streams, stock PFOF and cash interest, produce <b><b class="f" data-source="facts" data-field="display" data-where="id=top2_share">—</b></b> of revenue.</div></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="dec-cat"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Revenue by stream category</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">All accounts, 24 months, streams grouped by how Alpaca earns them.</p>
+        <div class="chart" id="ch-category" data-chart="category" data-source="category_shares stream_shares streams" style="min-height:190px"></div>
+        <div class="callout"><span class="co-i">◆</span><div><b>Key component:</b> Interest and trading carry <b><b class="f" data-source="facts" data-field="display" data-where="id=int_trade_share">—</b></b> of revenue. Subscriptions are only <b><b class="f" data-source="facts" data-field="display" data-where="id=subs_share">—</b></b>.</div></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="dec-time"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Revenue over time</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">All accounts, month by month (May 23 – Apr 25). Did we grow because we got more customers, or because each customer became worth more? And is the mix still the same?</p>
+        <figure class="embed">
+          <div class="chart" id="ch-area" data-chart="area" data-source="rev_monthly" style="min-height:300px"></div>
+          <div class="legend" data-legend="area"></div>
+        </figure>
+        <div class="callout"><span class="co-i">↗</span><div><b>Trend:</b> Monthly revenue grew <b><b class="f" data-source="facts" data-field="display" data-where="id=rev_growth_x">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=rev_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=rev_apr25">—</b>).</div></div>
+      </div></div></div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="appr-seg"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Segment accounts</span></button><div class="tg-b"><div class="tg-in">
+      <p class="intro">I segmented the accounts from 4 angles:</p>
+      <div class="tg tg-l4" id="seg-type"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Account type concentration</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">All accounts, 24 months (May 23 – Apr 25).</p>
+        <div class="split chart" id="sp-type" data-chart="ribbons" data-cut="account_type" data-source="segments" style="min-height:230px"></div>
+        <table class="tbl tbl-seg" data-source="segments" data-row-key="segment" data-cut="account_type"><thead><tr><th data-field="segment">Segment</th><th data-field="accounts">Accounts</th><th data-field="share_of_accounts">Share of accounts</th><th data-field="revenue_musd">Revenue ($M)</th><th data-field="share_of_revenue">Share of revenue</th></tr></thead><tbody></tbody></table>
+        <div class="callout"><span class="co-i">◆</span><div><b>Key component: <b class="f" data-source="facts" data-field="display" data-where="id=legal_n">—</b></b> legal entities produce <b><b class="f" data-source="facts" data-field="display" data-where="id=legal_rev_share">—</b></b> of revenue.</div></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="seg-geo"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Accounts geography concentration</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">Individuals only, last 6 months (Nov 24 – Apr 25), after Argentina took off. <b class="f" data-source="facts" data-field="display" data-where="id=arg_top12_n">—</b> of the <b class="f" data-source="facts" data-field="display" data-where="id=arg_n">—</b> Argentine accounts make <b class="f" data-source="facts" data-field="display" data-where="id=arg_top12_share">—</b> of it.</p>
+        <div class="split chart" id="sp-geo" data-chart="ribbons" data-cut="geography" data-source="segments" style="min-height:230px"></div>
+        <table class="tbl tbl-seg" data-source="segments" data-row-key="segment" data-cut="geography"><thead><tr><th data-field="segment">Segment</th><th data-field="accounts">Accounts</th><th data-field="share_of_accounts">Share of accounts</th><th data-field="revenue_musd">Revenue ($M)</th><th data-field="share_of_revenue">Share of revenue</th></tr></thead><tbody></tbody></table>
+        <div class="callout"><span class="co-i">◆</span><div><b>Key components:</b><ul class="bl"><li>The <b>USA</b> is the biggest market: <b><b class="f" data-source="facts" data-field="display" data-where="id=usa_acct_share">—</b></b> of accounts and <b><b class="f" data-source="facts" data-field="display" data-where="id=usa_rev_share">—</b></b> of individual revenue.</li><li>But the concentration is in <b>Argentina</b>: <b><b class="f" data-source="facts" data-field="display" data-where="id=arg_n">—</b></b> accounts (<b class="f" data-source="facts" data-field="display" data-where="id=arg_acct_share">—</b>) produce <b><b class="f" data-source="facts" data-field="display" data-where="id=arg_rev_share">—</b></b> of individual revenue, and just <b><b class="f" data-source="facts" data-field="display" data-where="id=arg_top12_n">—</b></b> of them make <b class="f" data-source="facts" data-field="display" data-where="id=arg_top12_share">—</b> of it.</li></ul></div></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="seg-vol"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Accounts volume concentration</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">All accounts, 24 months, ranked by total revenue.</p>
+        <div class="split chart" id="sp-volume" data-chart="ribbons" data-cut="volume" data-source="segments" style="min-height:230px"></div>
+        <table class="tbl tbl-seg" data-source="segments" data-row-key="segment" data-cut="volume"><thead><tr><th data-field="segment">Segment</th><th data-field="accounts">Accounts</th><th data-field="share_of_accounts">Share of accounts</th><th data-field="revenue_musd">Revenue ($M)</th><th data-field="share_of_revenue">Share of revenue</th></tr></thead><tbody></tbody></table>
+        <div class="callout"><span class="co-i">◆</span><div><b>Key component:</b> The top <b>1%</b> of accounts produce <b><b class="f" data-source="facts" data-field="display" data-where="id=top1_rev_share">—</b></b> of all revenue.<br><span class="muted">(Top 1% = <b class="f" data-source="facts" data-field="display" data-where="id=top1_n">—</b> accounts = <b class="f" data-source="facts" data-field="display" data-where="id=top10_rev_share">—</b> + <b class="f" data-source="facts" data-field="display" data-where="id=next288_rev_share">—</b> = <b class="f" data-source="facts" data-field="display" data-where="id=top1_rev_share">—</b>)</span></div></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="seg-time"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Accounts over time</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">All accounts, month by month (May 23 – Apr 25).</p>
+        <div class="vs2">
+          <div class="kpi kpi-gold"><span class="kpi-k">Revenue per month</span><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=rev_growth_x">—</b></span><span class="kpi-l"><b class="f" data-source="facts" data-field="display" data-where="id=rev_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=rev_apr25">—</b></span><div class="gbar"><i data-w="rev_growth_x" data-max="3.4"></i></div></div>
+          <div class="kpi kpi-dim"><span class="kpi-k">Accounts</span><span class="kpi-v"><b class="f big" data-source="facts" data-field="display" data-where="id=acct_growth_x">—</b></span><span class="kpi-l"><b class="f" data-source="facts" data-field="display" data-where="id=acct_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=acct_apr25">—</b></span><div class="gbar"><i data-w="acct_growth_x" data-max="3.4"></i></div></div>
+        </div>
+        <div class="callout"><span class="co-i">↗</span><div><b>Trends:</b><ul class="bl"><li>Monthly revenue grew <b><b class="f" data-source="facts" data-field="display" data-where="id=rev_growth_x">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=rev_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=rev_apr25">—</b>)</li><li>While accounts grew only <b><b class="f" data-source="facts" data-field="display" data-where="id=acct_growth_x">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=acct_may23_k">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=acct_apr25_k">—</b>)</li></ul></div></div>
+      </div></div></div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="appr-vol"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Measure streams volatility &amp; correlation</span></button><div class="tg-b"><div class="tg-in">
+      <p class="intro">I want to measure what swings the most and what moves together. I tested the streams from 3 angles:</p>
+      <div class="tg tg-l4" id="vol-vol"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Volatility</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">All accounts, 24 months:</p>
+        <ul class="bl">
+          <li><b>Typical monthly swing</b> = how much a stream usually moves up or down from one month to the next.</li>
+          <li><b>How I calculated the swing:</b> the % change of each month vs the month before.</li>
+        </ul>
+        <table class="tbl tbl-tight" id="tbl-vol1" data-source="streams" data-row-key="stream" data-kind="vol-simple">
+          <thead><tr><th data-field="label">Stream</th><th data-field="top10_share">Top 10 accounts' share of the stream</th><th data-field="swing">Typical monthly swing</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p class="note">Total revenue: <b><b class="f" data-source="facts" data-field="display" data-where="id=total_swing">—</b></b></p>
+        <div class="callout"><span class="co-i">〰</span><div><ul class="bl"><li>Streams that <b>a few accounts</b> control swing the most.</li><li>Total revenue swings only <b><b class="f" data-source="facts" data-field="display" data-where="id=total_swing">—</b></b>.</li><li>Market data at <b><b class="f" data-source="facts" data-field="display" data-where="id=md_swing">—</b></b>: it makes about <b class="f" data-source="facts" data-field="display" data-where="id=md_month">—</b> a month, and next month usually lands within about <b class="f" data-source="facts" data-field="display" data-where="id=md_move">—</b> of that.</li><li>Non-retail at <b><b class="f" data-source="facts" data-field="display" data-where="id=nonretail_swing">—</b></b>: it can double, drop to almost nothing, or even turn negative from one month to the next.</li></ul></div></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="vol-corr"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Correlation between streams</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">Individuals only, last 6 months (Nov 24 – Apr 25). Correlation runs from 0 (no link) to 1 (always together).</p>
+        <ul class="bl">
+          <li><b>Why individuals only:</b> this is a customer behavior question (which products does the same person use?), and the recommendations target individuals. Legal entities behave like institutions and would make products look linked when no retail customer behaves that way.</li>
+          <li><b>Why the last 6 months:</b> every product was live by then (options from May 24, the sweep from Nov 24), so every account had the chance to use all of them.</li>
+        </ul>
+        <table class="tbl tbl-tight" id="tbl-corr" data-source="streams" data-row-key="stream" data-kind="corr">
+          <thead><tr><th data-field="label">Stream</th><th data-field="corr_with_stock_pfof">Correlation with stock PFOF</th><th data-field="corr_note">How to read it</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <div class="callout"><span class="co-i">⇄</span><div><ul class="bl"><li>Stock traders also use <b>cash, margin and stock borrow</b>.</li><li>Market data subscribers use <b>nothing else</b>.</li></ul></div></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="vol-ladder"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Product ladder</span></button><div class="tg-b"><div class="tg-in">
+        <p class="intro">Individuals only, last 6 months. The top 1% of accounts are excluded so a few big accounts don't set the averages.</p>
+        <figure class="embed"><div class="chart" id="ch-ladder1" data-chart="ladder" data-source="ladder" style="min-height:260px"></div></figure>
+        <div class="callout"><span class="co-i">▲</span><div>Accounts using <b>5+</b> products earn <b><b class="f" data-source="facts" data-field="display" data-where="id=ladder_x">—</b></b> the revenue of accounts using one.</div></div>
+      </div></div></div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="appr-ctx"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Add Alpaca context</span></button><div class="tg-b"><div class="tg-in">
+      <p class="intro">I checked how Alpaca's B2C product actually works.</p>
+      <div class="tiles tiles-3">
+        <div class="tile"><span class="tile-n">$</span><b>Market data plans</b><p>Basic is free; <b>Algo Trader Plus is <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b>/month</b>.</p><p class="arrow">→ I assumed that to the <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b> rows.</p><a class="src" href="https://docs.alpaca.markets/us/docs/about-market-data-api" target="_blank" rel="noopener">Source: Market Data API ↗</a></div>
+        <div class="tile"><span class="tile-n">★</span><b>Alpaca Elite</b><p>Already exists for active traders (from <b class="f" data-source="facts" data-field="display" data-where="id=elite_min">—</b> deposits).</p><p class="arrow">→ I build on it rather than propose a new program.</p><a class="src" href="https://alpaca.markets/elite" target="_blank" rel="noopener">Source: Alpaca Elite ↗</a></div>
+        <div class="tile"><span class="tile-n">◆</span><b>Business accounts</b><p>Exist on the Trading API.</p><p class="arrow">→ This likely explains the legal entities in a B2C dataset.</p><a class="src" href="https://alpaca.markets/business-account" target="_blank" rel="noopener">Source: Business Accounts ↗</a></div>
+      </div>
+    </div></div></div>
+
+    <div class="callout callout-y"><span class="co-i">!</span><div><b>My B2C assumption:</b> I report totals on <b>all accounts</b>, and analyze behavior on <b>individuals only</b> (excluding the <b class="f" data-source="facts" data-field="display" data-where="id=legal_n">—</b> legal entities). Every number below says which one it uses.</div></div>
+  </div></div></div>
+
+  <div class="tg tg-l2" id="out"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">The Outcome</span></button><div class="tg-b"><div class="tg-in">
+
+    <div class="tg tg-l3" id="o-mtk"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Major Trends &amp; Key Components</span></button><div class="tg-b"><div class="tg-in">
+      <div class="tg tg-l4" id="o-kc"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Key components</span></button><div class="tg-b"><div class="tg-in">
+        <div class="tg tg-l5" id="kc-streams"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Revenue Streams:</b> 2 streams, stock PFOF and cash interest, make <b class="f" data-source="facts" data-field="display" data-where="id=top2_share">—</b> of revenue.</span></button><div class="tg-b"><div class="tg-in">
+          <p class="ref">As explained <a class="uplink" href="#dec-stream" data-open="dec-stream" data-jump>above</a> (revenue by stream, and <a class="uplink" href="#dec-cat" data-open="dec-cat" data-jump>by stream category</a>).</p>
+          <div class="tg tg-l6" id="kc-streams-a"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">2 streams, stock PFOF and cash interest, make <b class="f" data-source="facts" data-field="display" data-where="id=top2_share">—</b> of revenue.</span></button><div class="tg-b"><div class="tg-in">
+            <figure class="embed"><div class="chart" id="ch-kc-streams" data-chart="streambars" data-source="streams stream_shares" style="min-height:330px"></div></figure>
+          </div></div></div>
+          <div class="tg tg-l6" id="kc-streams-b"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Interest and trading carry <b class="f" data-source="facts" data-field="display" data-where="id=int_trade_share">—</b> of revenue. Subscriptions are only <b class="f" data-source="facts" data-field="display" data-where="id=subs_share">—</b>.</span></button><div class="tg-b"><div class="tg-in">
+            <div class="chart" id="ch-kc-category" data-chart="category" data-source="category_shares stream_shares streams" style="min-height:190px"></div>
+          </div></div></div>
+        </div></div></div>
+        <div class="tg tg-l5" id="kc-type"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Account Types:</b> <b class="f" data-source="facts" data-field="display" data-where="id=legal_n">—</b> legal entities (<b class="f" data-source="facts" data-field="display" data-where="id=legal_acct_share">—</b> of accounts) make <b class="f" data-source="facts" data-field="display" data-where="id=legal_rev_share">—</b> of revenue.</span></button><div class="tg-b"><div class="tg-in">
+          <p class="ref">As explained <a class="uplink" href="#seg-type" data-open="seg-type" data-jump>above</a> (account type concentration).</p>
+          <div class="split chart" id="sp-kc-type" data-chart="ribbons" data-cut="account_type" data-source="segments" style="min-height:230px"></div>
+        </div></div></div>
+        <div class="tg tg-l5" id="kc-geo"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Accounts Geography:</b> USA is the biggest market, but <b class="f" data-source="facts" data-field="display" data-where="id=arg_top12_n">—</b> Argentine accounts make <b class="f" data-source="facts" data-field="display" data-where="id=arg_rev_share">—</b> of individual revenue.</span></button><div class="tg-b"><div class="tg-in">
+          <p class="ref">As explained <a class="uplink" href="#seg-geo" data-open="seg-geo" data-jump>above</a> (accounts geography concentration).</p>
+          <div class="split chart" id="sp-kc-geo" data-chart="ribbons" data-cut="geography" data-source="segments" style="min-height:230px"></div>
+        </div></div></div>
+        <div class="tg tg-l5" id="kc-vol"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Accounts Volume:</b> the top 1% of accounts (<b class="f" data-source="facts" data-field="display" data-where="id=top1_n">—</b>) make <b class="f" data-source="facts" data-field="display" data-where="id=top1_rev_share">—</b> of revenue.</span></button><div class="tg-b"><div class="tg-in">
+          <p class="ref">As explained <a class="uplink" href="#seg-vol" data-open="seg-vol" data-jump>above</a> (accounts volume concentration).</p>
+          <div class="split chart" id="sp-kc-vol" data-chart="ribbons" data-cut="volume" data-source="segments" style="min-height:230px"></div>
+        </div></div></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="o-mt"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Major trends</span></button><div class="tg-b"><div class="tg-in">
+        <div class="tg tg-l5" id="tr1"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Trend 1:</b> revenue grew <b class="f" data-source="facts" data-field="display" data-where="id=rev_growth_x">—</b>, a few large new accounts made the jump, and the wider base kept it growing</span></button><div class="tg-b"><div class="tg-in">
+          <p class="sub">What I found:</p>
+          <ul class="bl">
+            <li>Revenue grew <b><b class="f" data-source="facts" data-field="display" data-where="id=rev_growth_x">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=rev_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=rev_apr25">—</b> a month). Accounts grew only <b><b class="f" data-source="facts" data-field="display" data-where="id=acct_growth_x">—</b></b>.</li>
+            <li>Most of the jump came in <b>one quarter</b>, Jun → Sep 24 (<b><b class="f" data-source="facts" data-field="display" data-where="id=jump_q">—</b></b> a month). <b><b class="f" data-source="facts" data-field="display" data-where="id=jump_share_3">—</b></b> of that came from three groups of large new accounts: Argentina, one Cayman legal entity and 4 Spanish accounts.</li>
+            <li>Since then, everyone else grew <b><b class="f" data-source="facts" data-field="display" data-where="id=else_growth">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=else_jun24">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=else_after">—</b> a month). The Spanish accounts stopped earning after Sep 24.</li>
+          </ul>
+          <figure class="embed"><div class="chart" id="ch-trend1" data-chart="trend1" data-source="rev_groups" style="min-height:300px"></div><div class="legend" data-legend="trend1"></div></figure>
+          <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>The step change came from landing a few large accounts, which makes revenue fragile.</li><li>Lasting growth needs more accounts earning, not only more revenue from a few.</li></ul></div>
+        </div></div></div>
+        <div class="tg tg-l5" id="tr2"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Trend 2:</b> revenue moved from interest to trading + newer products</span></button><div class="tg-b"><div class="tg-in">
+          <p class="sub">What I found</p>
+          <ul class="bl">
+            <li>Cash interest fell from <b><b class="f" data-source="facts" data-field="display" data-where="id=cash_share_23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=cash_share_6m">—</b></b>.</li>
+            <li>Stock PFOF rose from <b><b class="f" data-source="facts" data-field="display" data-where="id=pfof_share_23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=pfof_share_6m">—</b></b>. About half of that rise came from the new Argentine traders.</li>
+            <li>Newer products went from <b><b class="f" data-source="facts" data-field="display" data-where="id=newer_share_23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=newer_share_6m">—</b></b>.</li>
+          </ul>
+          <figure class="embed"><div class="chart" id="ch-mix" data-chart="mix" data-source="mix_shift" style="min-height:300px"></div><figcaption>Share of monthly revenue (2023 average) → last 6 months, Nov 24 – Apr 25</figcaption></figure>
+          <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>Revenue depends less on interest income.</li><li>It depends more on trading by a few large accounts, so it's less diversified than it looks.</li></ul></div>
+        </div></div></div>
+        <div class="tg tg-l5" id="tr3"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Trend 3:</b> signups tripled, but 6 in 10 open accounts have never earned anything</span></button><div class="tg-b"><div class="tg-in">
+          <p class="sub">What I found:</p>
+          <ul class="bl">
+            <li>Signups <b>tripled</b>, from <b class="f" data-source="facts" data-field="display" data-where="id=signups_23">—</b> a month to <b class="f" data-source="facts" data-field="display" data-where="id=signups_25">—</b> a month.</li>
+            <li>New signups convert well: <b><b class="f" data-source="facts" data-field="display" data-where="id=new_earned">—</b></b> earn at least once, most of them in their first month.</li>
+            <li>The older base doesn't: only <b><b class="f" data-source="facts" data-field="display" data-where="id=old_earned">—</b></b> earned anything in 24 months. Why the older base never started isn't in the data. Funding, first-trade and login data would tell us which, and give a full funnel.</li>
+          </ul>
+          <div class="two">
+            <figure class="embed"><p class="sub">New accounts per month</p><div class="chart" id="ch-signups" data-chart="signups" data-source="signups" style="min-height:230px"></div></figure>
+            <figure class="embed">
+              <p class="sub">Who earns at least once</p>
+              <div class="funnel">
+                <div class="fn-row"><span>New signups</span><div class="fn-bar"><i data-w="new_earned"></i></div><b><b class="f" data-source="facts" data-field="display" data-where="id=new_earned">—</b></b></div>
+                <div class="fn-row fn-bad"><span>Older base</span><div class="fn-bar"><i data-w="old_earned"></i></div><b><b class="f" data-source="facts" data-field="display" data-where="id=old_earned">—</b></b></div>
+              </div>
+              <div class="big-line"><b><b class="f big" data-source="facts" data-field="display" data-where="id=never_earned">—</b></b><span>open accounts have never earned anything</span></div>
+            </figure>
+          </div>
+          <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>Acquisition works. Getting accounts to start earning is the gap.</li><li><b class="f" data-source="facts" data-field="display" data-where="id=never_earned">—</b> open accounts have never earned anything, most of them in the older base.</li></ul></div>
+        </div></div></div>
+      </div></div></div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="o-cf"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Contributing Factors</span></button><div class="tg-b"><div class="tg-in">
+      <div class="tg tg-l4" id="cf-cash"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Cash interest:</b> looks like <b class="f" data-source="facts" data-field="display" data-where="id=cash_growth_x">—</b> growth, but it's one account</span></button><div class="tg-b"><div class="tg-in">
+        <p class="sub">What I found:</p>
+        <ul class="bl">
+          <li>Cash interest grew <b><b class="f" data-source="facts" data-field="display" data-where="id=cash_growth_x">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=cash_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=cash_apr25">—</b> a month).</li>
+          <li><b>One Cayman legal entity</b>, which joined in Apr 24, makes <b><b class="f" data-source="facts" data-field="display" data-where="id=cayman_cash_apr25">—</b></b> of that <b class="f" data-source="facts" data-field="display" data-where="id=cash_apr25">—</b>.</li>
+          <li>Everyone else stayed flat at <b><b class="f" data-source="facts" data-field="display" data-where="id=else_cash_low">—</b>–<b class="f" data-source="facts" data-field="display" data-where="id=else_cash_high">—</b></b> a month. Paying accounts grew <b><b class="f" data-source="facts" data-field="display" data-where="id=cash_payers_growth">—</b></b>, so interest per account fell (<b><b class="f" data-source="facts" data-field="display" data-where="id=cash_per_acct_23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=cash_per_acct_25">—</b></b> a month).</li>
+        </ul>
+        <p class="sub">Explanation:</p>
+        <ul class="bl"><li>The jump is one account, most likely holding a large cash balance.</li></ul>
+        <figure class="embed"><div class="chart" id="ch-cash" data-chart="cash" data-source="factors_monthly" style="min-height:270px"></div><div class="legend" data-legend="cash"></div></figure>
+        <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>The cash interest "growth" is one account.</li><li>For everyone else, interest income per account is shrinking.</li></ul></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="cf-pfof"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Stock PFOF:</b> 3 different drivers behind it</span></button><div class="tg-b"><div class="tg-in">
+        <p class="sub">What I found:</p>
+        <ul class="bl">
+          <li><b>US:</b> grew <b><b class="f" data-source="facts" data-field="display" data-where="id=us_pfof_x">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=us_pfof_24">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=us_pfof_25">—</b> a month). Paying traders rose <b><b class="f" data-source="facts" data-field="display" data-where="id=us_traders_growth">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=us_traders_24">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=us_traders_25">—</b>) and PFOF per trader doubled (<b><b class="f" data-source="facts" data-field="display" data-where="id=us_per_trader_24">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=us_per_trader_25">—</b></b>).</li>
+          <li><b>Argentina:</b> a dozen new accounts made <b><b class="f" data-source="facts" data-field="display" data-where="id=arg_pfof_share">—</b></b> of individual stock PFOF since Aug 24.</li>
+          <li><b>Other international:</b> a spike in Jul–Sep 24, mostly 4 Spanish accounts, that faded.</li>
+        </ul>
+        <p class="sub">Explanation:</p>
+        <ul class="bl"><li>Argentina likely reflects strong local demand for US-dollar assets.</li><li>US growth reflects more active traders trading more in a strong market. (I can't separate trading volume from PFOF rates without trade data).</li></ul>
+        <figure class="embed"><p class="sub">US stock PFOF per month, individuals</p><div class="chart" id="ch-pfof" data-chart="pfof" data-source="factors_monthly" style="min-height:260px"></div></figure>
+        <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>US growth is the healthiest growth in the dataset: broad and repeatable.</li><li>Argentina is a big opportunity and a big concentration risk at the same time.</li></ul></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="cf-margin"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Margin interest:</b> real broad growth</span></button><div class="tg-b"><div class="tg-in">
+        <p class="sub">What I found:</p>
+        <ul class="bl">
+          <li>Margin interest grew <b><b class="f" data-source="facts" data-field="display" data-where="id=margin_x">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=margin_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=margin_avg">—</b> a month on average since Oct 24).</li>
+          <li>Borrowers more than doubled (<b><b class="f" data-source="facts" data-field="display" data-where="id=borrowers_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=borrowers_apr25">—</b></b>).</li>
+          <li>Outside the top 10 accounts, margin revenue grew <b><b class="f" data-source="facts" data-field="display" data-where="id=margin10_x">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=margin10_may23">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=margin10_avg">—</b> a month).</li>
+        </ul>
+        <p class="sub">Explanation:</p>
+        <ul class="bl"><li>More customers are borrowing to trade.</li></ul>
+        <div class="two">
+          <figure class="embed"><p class="sub">Borrowers per month</p><div class="chart" id="ch-borrowers" data-chart="borrowers" data-source="factors_monthly" style="min-height:220px"></div></figure>
+          <figure class="embed"><p class="sub">Margin interest outside the top 10</p><div class="chart" id="ch-margin10" data-chart="margin10" data-source="factors_monthly" style="min-height:220px"></div></figure>
+        </div>
+        <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>Margin is a healthy, broad stream worth growing.</li><li>Margin borrowers are a natural next step on the product ladder (see Correlations).</li></ul></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="cf-new"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>New streams:</b> what launched and what worked</span></button><div class="tg-b"><div class="tg-in">
+        <p class="sub">What I found:</p>
+        <ul class="bl">
+          <li><b>Market data</b> (Dec 23): <b class="f" data-source="facts" data-field="display" data-where="id=md_jan24">—</b> in Jan 24 → <b><b class="f" data-source="facts" data-field="display" data-where="id=md_apr25">—</b></b> a month. The <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b> plan grew from <b class="f" data-source="facts" data-field="display" data-where="id=subs_jan24">—</b> → <b><b class="f" data-source="facts" data-field="display" data-where="id=subs_apr25">—</b></b> subscribers.</li>
+          <li><b>Options PFOF</b> (May 24): <b><b class="f" data-source="facts" data-field="display" data-where="id=opt_apr25">—</b></b> in Apr 25, from <b><b class="f" data-source="facts" data-field="display" data-where="id=opt_traders_apr25">—</b></b> traders, <b class="f" data-source="facts" data-field="display" data-where="id=opt_traders_x">—</b> the first month.</li>
+          <li><b>Crypto wallet</b> (Dec 23) and the <b>FDIC sweep</b> (May 24) stay below <b class="f" data-source="facts" data-field="display" data-where="id=crypto_ceiling">—</b> a month. Crypto had <b class="f" data-source="facts" data-field="display" data-where="id=crypto_payers_apr25">—</b> payers in Apr 25.</li>
+        </ul>
+        <p class="sub">Explanation:</p>
+        <ul class="bl"><li>Market data sells to developers building on Alpaca's API (see Correlations), so it grows with API adoption.</li><li>Options is still ramping, with monthly spikes.</li><li>Crypto: no clear reason in the data; likely a weak fit for an audience that comes for stocks and APIs.</li></ul>
+        <div class="three">
+          <figure class="embed"><p class="sub">Market data</p><div class="chart" id="ch-new-md" data-chart="new-md" data-source="factors_monthly" style="min-height:150px"></div></figure>
+          <figure class="embed"><p class="sub">Options PFOF</p><div class="chart" id="ch-new-opt" data-chart="new-opt" data-source="factors_monthly" style="min-height:150px"></div></figure>
+          <figure class="embed"><p class="sub">Crypto wallet</p><div class="chart" id="ch-new-crypto" data-chart="new-crypto" data-source="factors_monthly" style="min-height:150px"></div></figure>
+        </div>
+        <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>Market data and options are working.</li><li>Crypto isn't, as a B2C stream.</li></ul></div>
+      </div></div></div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="o-vol"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Volatile Components</span></button><div class="tg-b"><div class="tg-in">
+      <p class="sub">What I found:</p>
+      <ul class="bl">
+        <li>The streams few accounts control swing the hardest.</li>
+        <li>Market data is the steadiest (<b><b class="f" data-source="facts" data-field="display" data-where="id=md_swing">—</b></b>): its top 10 hold just <b class="f" data-source="facts" data-field="display" data-where="id=md_top10">—</b>. It makes about <b class="f" data-source="facts" data-field="display" data-where="id=md_month">—</b> a month, and next month usually lands within about <b class="f" data-source="facts" data-field="display" data-where="id=md_move">—</b> of that.</li>
+        <li>Concentration alone doesn't cause the stream volatility problem (margin is <b class="f" data-source="facts" data-field="display" data-where="id=margin_top10">—</b> top 10 but swings only <b class="f" data-source="facts" data-field="display" data-where="id=margin_swing">—</b>).</li>
+        <li>Total revenue swings only <b><b class="f" data-source="facts" data-field="display" data-where="id=total_swing">—</b></b>, because the streams partly offset each other.</li>
+      </ul>
+      <div>
+        <figure class="embed"><p class="sub">Typical monthly swing vs top 10 accounts' share</p><div class="chart" id="ch-scatter" data-chart="scatter" data-source="streams stream_shares" style="min-height:300px"></div></figure>
+        <figure class="embed">
+          <table class="tbl tbl-tight" id="tbl-vol" data-source="streams" data-row-key="stream" data-kind="vol">
+            <thead><tr><th data-field="label">Stream</th><th data-field="swing">Typical monthly swing</th><th data-field="top10_share">Top 10 accounts' share</th><th data-field="comment">My comments</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </figure>
+      </div>
+      <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>The streams a few accounts control swing the hardest.</li><li>Market data is the most predictable revenue.</li></ul></div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="o-corr"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Correlations &amp; Relationships Between Streams</span></button><div class="tg-b"><div class="tg-in">
+      <div class="tg tg-l4" id="corr-trade"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Trading products that go together</span></button><div class="tg-b"><div class="tg-in">
+        <p class="sub">What I found:</p>
+        <ul class="bl">
+          <li>Stock PFOF moves with cash interest (<b><b class="f" data-source="facts" data-field="display" data-where="id=corr_cash">—</b></b>), margin (<b><b class="f" data-source="facts" data-field="display" data-where="id=corr_margin">—</b></b>) and stock borrow (<b><b class="f" data-source="facts" data-field="display" data-where="id=corr_borrow">—</b></b>).</li>
+          <li><b><b class="f" data-source="facts" data-field="display" data-where="id=margin_also_stock">—</b></b> of margin borrowers (<b class="f" data-source="facts" data-field="display" data-where="id=margin_also_stock_n">—</b>) and <b><b class="f" data-source="facts" data-field="display" data-where="id=borrow_also_stock">—</b></b> of stock borrow payers (<b class="f" data-source="facts" data-field="display" data-where="id=borrow_also_stock_n">—</b>) also trade stocks.</li>
+          <li>Options is only weakly linked (<b><b class="f" data-source="facts" data-field="display" data-where="id=corr_options">—</b></b>): just <b><b class="f" data-source="facts" data-field="display" data-where="id=stock_also_options">—</b></b> of stock traders (<b class="f" data-source="facts" data-field="display" data-where="id=stock_also_options_n">—</b>) trade options.
+            <ul class="bl"><li>Why? If I have the data of "options eligibility, approval level and application status", it would help me answer "maybe not eligible, not approved, or not aware?"</li><li>One interesting point: options also reaches people beyond stock traders. <b><b class="f" data-source="facts" data-field="display" data-where="id=options_no_stock">—</b></b> of options traders (<b class="f" data-source="facts" data-field="display" data-where="id=options_no_stock_n">—</b>) don't trade stocks at all.</li></ul></li>
+        </ul>
+        <figure class="embed"><div class="chart" id="ch-corr" data-chart="corr" data-source="streams" style="min-height:240px"></div><figcaption>Every product was live in the last 6 months (options from May 24, the sweep from Nov 24), so every account had the chance to use all of them.</figcaption></figure>
+        <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>A funded, active stock trader tends to use several products, so cross-selling should start there.</li><li>Options is the least-used add-on among stock traders (<b class="f" data-source="facts" data-field="display" data-where="id=stock_also_options">—</b>).</li></ul></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="corr-ladder"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Every added product raises revenue per account</span></button><div class="tg-b"><div class="tg-in">
+        <p class="sub">What I found:</p>
+        <ul class="bl">
+          <li>Revenue per account rises with every product: <b><b class="f" data-source="facts" data-field="display" data-where="id=ladder_1">—</b></b> (1 product) → <b class="f" data-source="facts" data-field="display" data-where="id=ladder_2">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=ladder_3">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=ladder_4">—</b> → <b><b class="f" data-source="facts" data-field="display" data-where="id=ladder_5">—</b></b> (5+), <b><b class="f" data-source="facts" data-field="display" data-where="id=ladder_x">—</b></b>.</li>
+          <li><b><b class="f" data-source="facts" data-field="display" data-where="id=one_product_share">—</b></b> of accounts (<b class="f" data-source="facts" data-field="display" data-where="id=one_product_n">—</b> of <b class="f" data-source="facts" data-field="display" data-where="id=ladder_n">—</b>) use only one product.</li>
+          <li>Stock traders who also trade options earn <b><b class="f" data-source="facts" data-field="display" data-where="id=with_options">—</b> vs <b class="f" data-source="facts" data-field="display" data-where="id=without_options">—</b></b>; those who also use margin earn <b><b class="f" data-source="facts" data-field="display" data-where="id=with_margin">—</b> vs <b class="f" data-source="facts" data-field="display" data-where="id=without_margin">—</b></b>.</li>
+        </ul>
+        <figure class="embed"><div class="chart" id="ch-ladder" data-chart="ladder" data-source="ladder" style="min-height:270px"></div></figure>
+        <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>The product ladder is real, and most accounts are on the first step.</li><li>Heavier traders pick more products on their own, so cross-selling should be tested with holdouts (Rec 2).</li></ul></div>
+      </div></div></div>
+      <div class="tg tg-l4" id="corr-md"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Market data stands alone</span></button><div class="tg-b"><div class="tg-in">
+        <p class="sub">What I found:</p>
+        <ul class="bl">
+          <li>Market data has no link to any other stream (<b><b class="f" data-source="facts" data-field="display" data-where="id=corr_md">—</b></b> with stock PFOF).</li>
+          <li>The <b><b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b></b> plan adds real-time data from all US exchanges. Yet in Apr 25, only <b><b class="f" data-source="facts" data-field="display" data-where="id=md_trade_share">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=md_trade_n">—</b> of <b class="f" data-source="facts" data-field="display" data-where="id=md_subs_n">—</b> <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b> subscribers) generated any revenue beyond the <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b>.</li>
+          <li>Subscribers who also trade stay longer, in every month since Jan 24: on average <b><b class="f" data-source="facts" data-field="display" data-where="id=md_ret_trade">—</b></b> still pay the next month, vs <b><b class="f" data-source="facts" data-field="display" data-where="id=md_ret_data">—</b></b> for data-only. In early 2025 (<b><b class="f" data-source="facts" data-field="display" data-where="id=md_ret_trade_25">—</b></b> vs <b><b class="f" data-source="facts" data-field="display" data-where="id=md_ret_data_25">—</b></b>), <b class="f" data-source="facts" data-field="display" data-where="id=md_stop_trade">—</b> traders stopped paying in an average month, vs <b class="f" data-source="facts" data-field="display" data-where="id=md_stop_data">—</b> data-only.</li>
+          <li>When they stop paying, <b class="f" data-source="facts" data-field="display" data-where="id=md_close_data_n">—</b> data-only subscribers (<b><b class="f" data-source="facts" data-field="display" data-where="id=md_close_data">—</b></b>) close their account, vs <b class="f" data-source="facts" data-field="display" data-where="id=md_close_trade_n">—</b> traders (<b><b class="f" data-source="facts" data-field="display" data-where="id=md_close_trade">—</b></b>) (Feb 24 – Apr 25).</li>
+        </ul>
+        <div class="two two-73">
+          <figure class="embed"><p class="sub">Still paying the next month</p><div class="chart" id="ch-md" data-chart="md" data-source="md_retention" style="min-height:250px"></div><div class="legend" data-legend="md"></div></figure>
+          <figure class="embed">
+            <p class="sub">When they stop paying, they close their account</p>
+            <div class="dual-row"><span>Data-only</span><div class="fn-bar"><i data-w="md_close_data"></i></div><b><b class="f" data-source="facts" data-field="display" data-where="id=md_close_data">—</b></b></div>
+            <div class="dual-row dual-good"><span>Traders</span><div class="fn-bar"><i data-w="md_close_trade"></i></div><b><b class="f" data-source="facts" data-field="display" data-where="id=md_close_trade">—</b></b></div>
+          </figure>
+        </div>
+        <div class="concl"><p class="ck">Conclusion</p><ul class="bl"><li>The <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b> plan attracts serious algo builders, but most use Alpaca for data, not trading.</li><li>Getting them to trade pays twice: trading revenue on top of the <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b>, and longer subscriptions.</li><li>The first month is the lever: new subscribers who trade in month 1 stay at <b class="f" data-source="facts" data-field="display" data-where="id=m1_trade">—</b>, vs <b class="f" data-source="facts" data-field="display" data-where="id=m1_data">—</b> for data-only (Rec 3).</li></ul></div>
+      </div></div></div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="o-recs"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Recommendations to Grow the Business</span></button><div class="tg-b"><div class="tg-in">
+      <p class="intro">Before showing my 3 recommendations, I want to share how I reached them.</p>
+      <ul class="bl intro-l"><li>I listed all the identified opportunities in the whole exercise, then prioritized them,</li><li>then came up with multiple recommendations, then focused on 3 recommendations.</li></ul>
+      <div class="funnel-w" id="rec-funnel">
+        <div class="nw nw-1" data-pop="listed" tabindex="0"><b>Listed</b><span>all identified opportunities</span><i class="nw-i">i</i></div>
+        <div class="nw nw-2" data-pop="prioritized" tabindex="0"><b>Prioritized</b><span>them</span><i class="nw-i">i</i></div>
+        <div class="nw nw-3" data-pop="drafted" tabindex="0"><b>Drafted</b><span>multiple recommendations</span><i class="nw-i">i</i></div>
+        <div class="nw nw-4" data-pop="focused" tabindex="0"><b>Focused on 3</b><i class="nw-i">i</i></div>
+        <div class="pop" id="rec-pop" data-source="rec_process" hidden></div>
+      </div>
+      <p class="pop-hint">Hover a step to see the details behind it.</p>
+
+      <div class="tg tg-l4" id="r1"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Recommendation 1:</b> Protect and multiply high-value accounts</span></button><div class="tg-b"><div class="tg-in">
+        <div class="tg tg-l5" id="r1-a"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">First opportunity</span></button><div class="tg-b"><div class="tg-in">
+          <div class="hero-n"><b><b class="f big" data-source="facts" data-field="display" data-where="id=r1_protect">—</b></b><span>of Apr 25's <b class="f" data-source="facts" data-field="display" data-where="id=rev_apr25">—</b> (<b class="f" data-source="facts" data-field="display" data-where="id=r1_protect_share">—</b>) came from <b class="f" data-source="facts" data-field="display" data-where="id=arg_top12_n">—</b> Argentine accounts and one Cayman entity.</span></div>
+          <ul class="bl">
+            <li><b><b class="f" data-source="facts" data-field="display" data-where="id=jump_share_3">—</b></b> of the Jun → Sep 24 jump (<b class="f" data-source="facts" data-field="display" data-where="id=jump_q">—</b>/month) came from a few large new accounts.</li>
+            <li>The top 1% (<b><b class="f" data-source="facts" data-field="display" data-where="id=top1_n">—</b> accounts</b>) make <b><b class="f" data-source="facts" data-field="display" data-where="id=top1_rev_share">—</b></b> of revenue, and the streams they control swing the hardest.</li>
+          </ul>
+          <p class="intro">What I see is that the accounts that carry revenue today are also the biggest growth upside.</p>
+        </div></div></div>
+        <div class="tg tg-l5" id="r1-b"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">My proposed action</span></button><div class="tg-b"><div class="tg-in">
+          <ol class="ol">
+            <li><b>Watch revenue-at-risk:</b> alert when a top 300 account's activity drops vs its own 3 months average, with a named owner for each account.</li>
+            <li><b>Proactive Elite invites</b> for eligible accounts (from <b class="f" data-source="facts" data-field="display" data-where="id=elite_min">—</b> deposits). We don't wait for top accounts to find Elite on their own. Invite them, so they feel valued and are less likely to leave.</li>
+            <li><b>Find more like them:</b> trace how the mid-2024 accounts arrived (partner, referral, sales), then run a look-alike test in that channel, starting with demand for US dollar assets like Argentina's users.</li>
+          </ol>
+        </div></div></div>
+        <div class="tg tg-l5" id="r1-c"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Expected impact &amp; success metrics</span></button><div class="tg-b"><div class="tg-in">
+          <div class="two">
+            <div class="imp"><b>Protect ~<b class="f" data-source="facts" data-field="display" data-where="id=r1_protect">—</b>/month</b><span>Each Argentine-sized account we keep is worth ~<b class="f" data-source="facts" data-field="display" data-where="id=r1_per_acct">—</b>/month (<b class="f" data-source="facts" data-field="display" data-where="id=r1_arg_month">—</b> ÷ <b class="f" data-source="facts" data-field="display" data-where="id=arg_top12_n">—</b>).</span></div>
+            <div class="imp"><b>+~<b class="f" data-source="facts" data-field="display" data-where="id=r1_grow5">—</b>/month</b><span>Growing: every 5 new accounts of that size.</span></div>
+          </div>
+          <p class="sub">Success metrics:</p>
+          <ol class="ol metrics-ol">
+            <li><b>Growth:</b> number of accounts earning $1K+/month (<b class="f" data-source="facts" data-field="display" data-where="id=r1_1k_accts">—</b> in Apr 25)<br><span class="muted">How many accounts bring in $1K or more in a month. If we're finding more high-value accounts, this count rises above today's <b class="f" data-source="facts" data-field="display" data-where="id=r1_1k_accts">—</b>.</span></li>
+            <li><b>Protection:</b> 90-day revenue retention of the top 300 accounts<br><span class="muted">Of what the top 300 accounts earn us this month, how much the same accounts still earn us 90 days later. Close to 100% means we're keeping them; a drop is an early warning.</span></li>
+            <li><b>Health:</b> top-12 share of revenue falls while total revenue grows<br><span class="muted">It should go down while total revenue goes up, meaning growth is spreading across more accounts, not that we lost the big ones.</span></li>
+          </ol>
+        </div></div></div>
+        <div class="tg tg-l5" id="r1-d"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Assumptions</span></button><div class="tg-b"><div class="tg-in">
+          <ul class="bl"><li>Top accounts are real customers, not misclassified omnibus or professional accounts.</li><li>Argentina's demand for US-dollar assets continues.</li><li>We can find out how these accounts arrived.</li></ul>
+        </div></div></div>
+      </div></div></div>
+
+      <div class="tg tg-l4" id="r2"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Recommendation 2:</b> Move every account up the ladder, from step 0</span></button><div class="tg-b"><div class="tg-in">
+        <div class="tg tg-l5" id="r2-a"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Second opportunity</span></button><div class="tg-b"><div class="tg-in">
+          <div class="hero-n"><b><b class="f big" data-source="facts" data-field="display" data-where="id=r2_never">—</b></b><span>open accounts have never earned anything (<b class="f" data-source="facts" data-field="display" data-where="id=r2_never_old">—</b> in the older base, <b class="f" data-source="facts" data-field="display" data-where="id=r2_never_new">—</b> new signups).</span></div>
+          <ul class="bl">
+            <li><b><b class="f" data-source="facts" data-field="display" data-where="id=one_product_share">—</b></b> of earning accounts (<b class="f" data-source="facts" data-field="display" data-where="id=one_product_n">—</b> of <b class="f" data-source="facts" data-field="display" data-where="id=ladder_n">—</b>) use only one product, while revenue per account climbs from <b><b class="f" data-source="facts" data-field="display" data-where="id=ladder_1">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=ladder_5">—</b></b> with 5+ products.</li>
+            <li>Funded stock traders already add cash, margin and stock borrow on their own. Yet only <b><b class="f" data-source="facts" data-field="display" data-where="id=stock_also_options">—</b></b> of them (<b class="f" data-source="facts" data-field="display" data-where="id=stock_also_options_n">—</b>) trade options and ~<b><b class="f" data-source="facts" data-field="display" data-where="id=stock_margin_share">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=stock_margin_n">—</b>) use margin.</li>
+          </ul>
+          <p class="intro">→ Most accounts sit on step 0 or 1, and the ones that climb earn much more.</p>
+        </div></div></div>
+        <div class="tg tg-l5" id="r2-b"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">My proposed action</span></button><div class="tg-b"><div class="tg-in">
+          <p class="intro">I propose 4 levers. A lever is one action we pull to move accounts up the ladder.</p>
+          <div class="levers">
+            <div><span>Step 0 → 1</span><b>Lever 1, new signups</b>Push them to a first trade in month 1, when most new earners start.</div>
+            <div><span>Step 0 → 1</span><b>Lever 2, older base</b>Re-engage the accounts that never earned anything.</div>
+            <div><span>Step 1 → 2</span><b>Lever 3, margin</b>Offer margin pre-qualification to funded stock traders.</div>
+            <div><span>Step 1 → 2</span><b>Lever 4, options</b>Offer options approval to funded stock traders.</div>
+          </div>
+          <p class="note">Step 0 → 1: track the first steps (KYC, funding, first trade) to see where accounts stop. <b>Test every lever with a 10% holdout:</b> keep a random 10% of eligible accounts out of each lever, and compare them with the rest. The gap between the two groups is our real impact, since heavier traders may add products on their own anyway.</p>
+        </div></div></div>
+        <div class="tg tg-l5" id="r2-c"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Expected impact &amp; success metrics</span></button><div class="tg-b"><div class="tg-in">
+          <figure class="embed"><div class="chart" id="ch-levers" data-chart="levers" data-source="levers" style="min-height:220px"></div></figure>
+          <p class="intro">→ In total, ~<b class="f" data-source="facts" data-field="display" data-where="id=r2_total">—</b>/month (~<b class="f" data-source="facts" data-field="display" data-where="id=r2_year">—</b>/year). It's smaller than Rec 1, but it comes from thousands of accounts rather than a dozen, so it's steadier. The holdouts will show how much of it is real.</p>
+          <p class="sub">Success metrics:</p>
+          <ol class="ol metrics-ol">
+            <li><b>Ladder:</b> % of accounts using 2+ products (<b class="f" data-source="facts" data-field="display" data-where="id=two_plus_share">—</b> today)</li>
+            <li><b>Activation:</b> never-earned accounts making their first revenue each month</li>
+            <li><b>Attach:</b> options and margin uptake among stock traders, vs holdout (<b class="f" data-source="facts" data-field="display" data-where="id=stock_also_options">—</b> and <b class="f" data-source="facts" data-field="display" data-where="id=stock_margin_share">—</b> today)</li>
+          </ol>
+        </div></div></div>
+        <div class="tg tg-l5" id="r2-d"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Assumptions</span></button><div class="tg-b"><div class="tg-in">
+          <ul class="bl"><li>Converted accounts earn like today's average accounts outside the top 1%.</li><li>Options and margin need suitability approval.</li><li>The <b class="f" data-source="facts" data-field="display" data-where="id=r2_never">—</b> accounts are still open and reachable.</li></ul>
+        </div></div></div>
+      </div></div></div>
+
+      <div class="tg tg-l4" id="r3"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t"><b>Recommendation 3:</b> Get <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b> data subscribers trading in their first month</span></button><div class="tg-b"><div class="tg-in">
+        <div class="tg tg-l5" id="r3-a"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Third opportunity</span></button><div class="tg-b"><div class="tg-in">
+          <div class="hero-n"><b><b class="f big" data-source="facts" data-field="display" data-where="id=m1_leave">—</b></b><span>new subscribers leave after month 1. Those who trade in month 1 stay at <b class="f" data-source="facts" data-field="display" data-where="id=m1_trade">—</b>, vs <b class="f" data-source="facts" data-field="display" data-where="id=m1_data">—</b> for data-only.</span></div>
+          <ul class="bl">
+            <li>Market data is the steadiest stream (<b><b class="f" data-source="facts" data-field="display" data-where="id=md_swing">—</b></b>) and grew from <b class="f" data-source="facts" data-field="display" data-where="id=subs_jan24">—</b> → <b><b class="f" data-source="facts" data-field="display" data-where="id=subs_apr25">—</b></b> subscribers. Which is a great entry point.</li>
+            <li>Only <b><b class="f" data-source="facts" data-field="display" data-where="id=md_trade_share">—</b></b> (<b class="f" data-source="facts" data-field="display" data-where="id=md_trade_n">—</b> of <b class="f" data-source="facts" data-field="display" data-where="id=md_subs_n">—</b>) generate any revenue beyond the <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b>.</li>
+            <li>When "data only" subscribers leave, <b><b class="f" data-source="facts" data-field="display" data-where="id=md_close_data">—</b></b> close their account, vs <b><b class="f" data-source="facts" data-field="display" data-where="id=md_close_trade">—</b></b> of traders.</li>
+          </ul>
+          <p class="intro">The first month decides whether a subscriber stays, and whether they ever trade.</p>
+        </div></div></div>
+        <div class="tg tg-l5" id="r3-b"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">My proposed action</span></button><div class="tg-b"><div class="tg-in">
+          <ol class="ol">
+            <li><b>Make the move from paper to live seamless:</b> I haven't seen how this move works today. So my first step is to walk through it with the team, find every blocker that stops a developer from going live, and remove it.</li>
+            <li><b>Better first-month onboarding:</b> guide new subscribers step by step toward their first real trade.</li>
+            <li><b>An incentive to go live:</b> for example, refund the first <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b> once they deposit money and place a real trade.</li>
+            <li><b>An early-warning alert:</b> when a new subscriber's activity drops in month 1, reach out before they cancel.</li>
+          </ol>
+        </div></div></div>
+        <div class="tg tg-l5" id="r3-c"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Expected impact &amp; success metrics</span></button><div class="tg-b"><div class="tg-in">
+          <div class="gauge"><div class="g-row"><span>Month-1 retention today</span><div class="fn-bar"><i data-w="m1_ret"></i></div><b><b class="f" data-source="facts" data-field="display" data-where="id=m1_ret">—</b></b></div><div class="g-row g-target"><span>Target</span><div class="fn-bar"><i data-w="m1_target"></i></div><b><b class="f" data-source="facts" data-field="display" data-where="id=m1_target">—</b></b></div></div>
+          <div class="three">
+            <div class="imp"><b>+<b class="f" data-source="facts" data-field="display" data-where="id=r3_subs">—</b> subscribers</b><span>long-term (<b class="f" data-source="facts" data-field="display" data-where="id=r3_subs_from">—</b> → <b class="f" data-source="facts" data-field="display" data-where="id=r3_subs_to">—</b>) → ~<b class="f" data-source="facts" data-field="display" data-where="id=r3_month">—</b>/month (~<b class="f" data-source="facts" data-field="display" data-where="id=r3_year">—</b>/year) in data revenue.</span></div>
+            <div class="imp"><b>+1 point = <b class="f" data-source="facts" data-field="display" data-where="id=r3_per_point">—</b> subscribers</b><span>(<b class="f" data-source="facts" data-field="display" data-where="id=r3_per_point_usd">—</b>/month). For example, going from <b class="f" data-source="facts" data-field="display" data-where="id=m1_ret">—</b> to <b class="f" data-source="facts" data-field="display" data-where="id=m1_ret_plus1">—</b> keeps about <b class="f" data-source="facts" data-field="display" data-where="id=r3_per_point">—</b> more people paying <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b>.</span></div>
+            <div class="imp"><b>Plus trading revenue</b><span>each subscriber who starts trading generates about <b class="f" data-source="facts" data-field="display" data-where="id=r3_trade_rev">—</b>/month more on top of the <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b>.</span></div>
+          </div>
+          <p class="sub">Success metrics:</p>
+          <ol class="ol metrics-ol">
+            <li><b>Retention:</b> month-1 retention (<b class="f" data-source="facts" data-field="display" data-where="id=m1_ret">—</b> today, target <b class="f" data-source="facts" data-field="display" data-where="id=m1_target">—</b>)</li>
+            <li><b>Activation:</b> % of new subscribers trading live within 30 days (<b class="f" data-source="facts" data-field="display" data-where="id=m1_activation">—</b> today)</li>
+            <li><b>Business:</b> total revenue per subscriber (data + trading)</li>
+          </ol>
+        </div></div></div>
+        <div class="tg tg-l5" id="r3-d"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Assumptions</span></button><div class="tg-b"><div class="tg-in">
+          <ul class="bl"><li>The <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b> rows are the Algo Trader Plus plan.</li><li>Trading partly causes the higher retention, rather than only reflecting more committed users.</li><li><b class="f" data-source="facts" data-field="display" data-where="id=new_subs_month">—</b> new subscribers a month holds.</li></ul>
+        </div></div></div>
+      </div></div></div>
+    </div></div></div>
+
+    <div class="tg tg-l3" id="o-lim"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Limitations &amp; Data I'd Want</span></button><div class="tg-b"><div class="tg-in">
+      <div class="tg tg-l4" id="lim-a"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Limitations</span></button><div class="tg-b"><div class="tg-in">
+        <ol class="ol lims-ol">
+          <li><b>We see revenue, not what drives it.</b> No balances, trades, prices or costs: I can see what we earned, but not why, or what it cost us.</li>
+          <li><b>We can't see the customer journey.</b> No signup, funding, first-trade or closing dates; an account's first month in the data stands in for its signup.</li>
+          <li><b>The "B2C" data isn't pure B2C.</b> It includes <b class="f" data-source="facts" data-field="display" data-where="id=legal_n">—</b> legal entities and non-retail revenue, and some negative values with no explanation.</li>
+          <li><b>24 months is short.</b> It includes rate cuts, an election and strong markets, so one-off events are hard to tell apart from trends.</li>
+        </ol>
+      </div></div></div>
+      <div class="tg tg-l4" id="lim-b"><button class="tg-h" aria-expanded="false"><span class="tg-tri" aria-hidden="true"></span><span class="tg-t">Data I'd want</span></button><div class="tg-b"><div class="tg-in">
+        <table class="tbl want-tbl">
+          <thead><tr><th>Data</th><th>Would answer…</th></tr></thead>
+          <tbody>
+            <tr><td>How each big account found us (partner, referral, sales), and what we launched or ran each month</td><td>Why did Argentina, the Cayman entity and Spain arrive in mid-2024, and how do we find more like them? (Trend 1)</td></tr>
+            <tr><td>Each account's first steps: KYC approved, funded, first trade, last login, paper or live</td><td>Where did the <b class="f" data-source="facts" data-field="display" data-where="id=never_earned">—</b> dormant accounts stop, and why? (Trend 3)</td></tr>
+            <tr><td>Cash balances and the interest rate we pay customers</td><td>Is cash interest falling because of rates, the sweep, or less cash? (see Contributing Factors)</td></tr>
+            <tr><td>Number of trades and the PFOF we earn per trade</td><td>Did US traders trade more, or did we earn more per trade? (see Contributing Factors)</td></tr>
+            <tr><td>Options eligibility and approval</td><td>Why do only <b class="f" data-source="facts" data-field="display" data-where="id=stock_also_options">—</b> of stock traders trade options? (see Correlations)</td></tr>
+            <tr><td>Free-plan users, API and paper trading usage, cancellation reasons</td><td>What moves a developer from free to <b class="f" data-source="facts" data-field="display" data-where="id=md_price">—</b> to live trading, and why do new subscribers leave after one month? (see Correlations)</td></tr>
+          </tbody>
+        </table>
+      </div></div></div>
+    </div></div></div>
+  </div></div></div>
+</div></div></div>
+
+    <div class="tail">
+      <div class="callout callout-b"><span class="co-i">i</span><div><b>Disclaimer:</b><br>I used Claude as my data analysis partner to process <b class="f" data-source="facts" data-field="display" data-where="id=rows_rounded">—</b> rows and break it down in the way I needed.<br>I used it also to draw charts to help visualize my raw Excel data findings.</div></div>
+      <div class="callout callout-y"><span class="co-i">▦</span><div><b>Working sheet:</b><br>I worked on the <a href="https://docs.google.com/spreadsheets/d/1twUlteZWm4d8zR6Bdi1E-8se5bcFJTGG-FKqwsf0iOs/edit?usp=sharing" target="_blank" rel="noopener">PM Interview Data sheet ↗</a> that I received. I built on it all the analysis tabs I needed.<br>Everything here in the notion document file is based on my findings in the sheet.</div></div>
+    </div>
+  </main>
+  <div class="dock-wrap"><div class="dock">
+    <button class="dock-back" hidden></button>
+    <button class="dock-btn dock-prev" aria-label="Back">←</button>
+    <span class="dock-count"></span>
+    <button class="dock-next"><small>Next</small><span></span> →</button>
+  </div></div>
+</div>
+
+
+
+</div>
+<script src="assets/js/d3.v7.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/dash-shim.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
