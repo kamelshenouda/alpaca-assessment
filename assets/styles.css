@@ -521,5 +521,6 @@ h4{margin:0 0 6px;font-size:18px;letter-spacing:-.01em}
 .nb .chart .ax-y text,.nb .chart .vlab{font-family:var(--font-num)}
 .nb .chart .lbl,.nb .chart .ann{font-family:var(--font)}
 .nb .tg-t .f{font-weight:inherit}
+.nb .dock-count{display:none!important}
 
 .nb{min-height:100vh}
