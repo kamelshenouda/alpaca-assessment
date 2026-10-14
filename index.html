@@ -1,19 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!-- Google Analytics: runs only on kamelnabil.com and its subdomains -->
-<script>
-if (/(^|\.)kamelnabil\.com$/.test(location.hostname)) {
-  var ga = document.createElement('script');
-  ga.async = true;
-  ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-SQX5JZP3MM';
-  document.head.appendChild(ga);
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function () { dataLayer.push(arguments); };
-  gtag('js', new Date());
-  gtag('config', 'G-SQX5JZP3MM');
-}
-</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kamel Nabil × Alpaca · Take-home</title>
@@ -656,8 +643,8 @@ if (/(^|\.)kamelnabil\.com$/.test(location.hostname)) {
 </div></div></div>
 
     <div class="tail">
-      <div class="callout callout-b"><span class="co-i">i</span><div><b>Disclaimer:</b><br>I used Claude as my data analysis partner to process <b class="f" data-source="facts" data-field="display" data-where="id=rows_rounded">—</b> rows and break it down in the way I needed.<br>I used it also to draw charts to help visualize my raw Excel data findings.</div></div>
       <div class="callout callout-y"><span class="co-i">▦</span><div><b>Working sheet:</b><br>I worked on the <a href="https://docs.google.com/spreadsheets/d/1twUlteZWm4d8zR6Bdi1E-8se5bcFJTGG-FKqwsf0iOs/edit?usp=sharing" target="_blank" rel="noopener">PM Interview Data sheet ↗</a> that I received. I built on it all the analysis tabs I needed.<br>Everything here in the notion document file is based on my findings in the sheet.</div></div>
+      <div class="callout callout-b"><span class="co-i">i</span><div><b>Disclaimer:</b><br>I used Claude as my data analysis partner to process <b class="f" data-source="facts" data-field="display" data-where="id=rows_rounded">—</b> rows and break it down in the way I needed.<br>I used it also to draw charts to help visualize my raw Excel data findings.</div></div>
     </div>
   </main>
   <div class="dock-wrap"><div class="dock">
@@ -676,37 +663,5 @@ if (/(^|\.)kamelnabil\.com$/.test(location.hostname)) {
 <script src="assets/js/dash-shim.js"></script>
 <script src="assets/js/charts.js"></script>
 <script src="assets/js/app.js"></script>
-<script>
-/* Analytics: report each section a visitor opens as its own page view
-   (path /section/<id>), so Google Analytics shows how far people read. */
-(function () {
-  if (!window.gtag) return;
-  function title(tg) {
-    var t = tg.querySelector(':scope > .tg-h .tg-t');
-    if (!t) return tg.id;
-    var b = t.querySelector(':scope > b');
-    var txt = (b && t.firstElementChild === b ? b.textContent.replace(/:\s*$/, '') : t.textContent);
-    return txt.replace(/\s+/g, ' ').trim().slice(0, 80);
-  }
-  function part(tg) {
-    if (tg.id === 'p1' || tg.id === 'p2') return '';
-    return tg.closest('#p2') ? 'Part 2 › ' : tg.closest('#p1') ? 'Part 1 › ' : '';
-  }
-  var watch = new MutationObserver(function (muts) {
-    muts.forEach(function (m) {
-      var tg = m.target;
-      if (!tg.classList.contains('cur') || /\bcur\b/.test(m.oldValue || '')) return;
-      gtag('event', 'page_view', {
-        page_title: 'Alpaca › ' + part(tg) + title(tg),
-        page_location: location.origin + '/section/' + tg.id
-      });
-    });
-  });
-  document.querySelectorAll('.tg').forEach(function (tg) {
-    watch.observe(tg, { attributes: true, attributeFilter: ['class'], attributeOldValue: true });
-  });
-})();
-</script>
-<script src="https://kamelnabil.com/notify.js" defer></script>
 </body>
 </html>
