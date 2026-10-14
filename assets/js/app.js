@@ -98,6 +98,7 @@
   }
 
   function setCurrent(tg, opts = {}) {
+    if (window.__apHidePop) window.__apHidePop();
     const animate = opts.animate !== false;
     const want = new Set(tg ? ancestors(tg) : []);
     const opened = [];
@@ -154,6 +155,7 @@
   document.addEventListener('keydown', (e) => {
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     const t = e.target; if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+    if (window.__apHidePop && ['ArrowRight', 'ArrowLeft', 'PageDown', 'PageUp', ' ', 'Escape', 'Home'].includes(e.key)) window.__apHidePop();
     if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); next(); }
     else if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); prev(); }
     else if (e.key === 'Escape' || e.key === 'Home') { setCurrent(null); root.scrollIntoView({ block: 'start', behavior: 'smooth' }); }
@@ -481,27 +483,63 @@
       pop.append(head, ul);
     }
   }
+  // The card lives at the page root so no section can paint over it or restyle it.
+  root.appendChild(pop);
+  function placePop(row) {
+    // Anchor under the whole funnel so every step stays visible and hoverable.
+    const fun = row.closest('.funnel-w') || row;
+    const steps = fun.querySelectorAll('.nw');
+    const last = steps.length ? steps[steps.length - 1] : row;
+    const fr = fun.getBoundingClientRect(), lr = last.getBoundingClientRect(), rt = root.getBoundingClientRect();
+    const W = Math.max(280, Math.min(1080, root.clientWidth - 32));
+    let left = fr.left - rt.left + fr.width / 2 - W / 2;
+    left = Math.max(16, Math.min(left, root.clientWidth - W - 16));
+    pop.style.width = W + 'px';
+    pop.style.left = left + 'px';
+    // Open below the funnel, or above it when there is clearly more room there.
+    const below = window.innerHeight - lr.bottom - 12 - 96; // keep clear of the bottom dock
+    const above = fr.top - 12 - 64; // keep clear of the top bar
+    pop.style.maxHeight = 'none';
+    const natural = pop.scrollHeight + 2;
+    const up = below < Math.min(natural, 420) && above > below;
+    const h = Math.max(240, Math.min(natural, up ? above : below));
+    pop.style.maxHeight = h + 'px';
+    pop.style.top = (up ? fr.top - rt.top - 12 - Math.min(natural, h) : lr.bottom - rt.top + 12) + 'px';
+    pop.dataset.side = up ? 'up' : 'down';
+  }
   function showPop(row) {
     clearTimeout(popTimer);
+    if (row.closest('.tg:not(.open)')) return;
     const kind = row.dataset.pop;
     root.querySelectorAll('.nw[data-pop]').forEach((n) => n.classList.toggle('on', n === row));
-    if (kind !== popKind) { renderPop(kind); popKind = kind; }
-    pop.style.top = row.offsetTop + row.offsetHeight + 10 + 'px';
-    pop.hidden = false; requestAnimationFrame(() => pop.classList.add('on'));
+    if (kind !== popKind) { renderPop(kind); popKind = kind; pop.scrollTop = 0; }
+    pop.hidden = false;
+    placePop(row);
+    requestAnimationFrame(() => pop.classList.add('on'));
   }
   function hidePop(now) {
     clearTimeout(popTimer);
-    popTimer = setTimeout(() => { pop.classList.remove('on'); root.querySelectorAll('.nw[data-pop]').forEach((n) => n.classList.remove('on')); }, now ? 0 : 180);
+    const close = () => {
+      pop.classList.remove('on');
+      setTimeout(() => { if (!pop.classList.contains('on')) pop.hidden = true; }, 260);
+      root.querySelectorAll('.nw[data-pop]').forEach((n) => n.classList.remove('on'));
+      const f = document.activeElement; if (f && f.matches && f.matches('.nw[data-pop]')) f.blur();
+    };
+    if (now) close(); else popTimer = setTimeout(close, 180);
   }
+  window.__apHidePop = () => hidePop(true);
   root.querySelectorAll('.nw[data-pop]').forEach((row) => {
     row.addEventListener('mouseenter', () => showPop(row));
     row.addEventListener('mouseleave', () => hidePop());
-    row.addEventListener('focus', () => showPop(row));
+    row.addEventListener('focus', () => { if (row.matches(':focus-visible')) showPop(row); });
     row.addEventListener('blur', () => hidePop());
-    row.addEventListener('click', () => (pop.classList.contains('on') && row.classList.contains('on') ? hidePop(true) : showPop(row)));
+    row.addEventListener('click', (e) => { e.stopPropagation(); pop.classList.contains('on') && row.classList.contains('on') ? hidePop(true) : showPop(row); });
   });
   pop.addEventListener('mouseenter', () => clearTimeout(popTimer));
   pop.addEventListener('mouseleave', () => hidePop());
+  pop.addEventListener('click', (e) => e.stopPropagation());
+  document.addEventListener('click', () => { if (pop.classList.contains('on')) hidePop(true); });
+  window.addEventListener('resize', () => { if (pop.classList.contains('on')) hidePop(true); });
 
   // ---------- data loop ----------
   dash.onData(() => {
