@@ -676,5 +676,36 @@ if (/(^|\.)kamelnabil\.com$/.test(location.hostname)) {
 <script src="assets/js/dash-shim.js"></script>
 <script src="assets/js/charts.js"></script>
 <script src="assets/js/app.js"></script>
+<script>
+/* Analytics: report each section a visitor opens as its own page view
+   (path /section/<id>), so Google Analytics shows how far people read. */
+(function () {
+  if (!window.gtag) return;
+  function title(tg) {
+    var t = tg.querySelector(':scope > .tg-h .tg-t');
+    if (!t) return tg.id;
+    var b = t.querySelector(':scope > b');
+    var txt = (b && t.firstElementChild === b ? b.textContent.replace(/:\s*$/, '') : t.textContent);
+    return txt.replace(/\s+/g, ' ').trim().slice(0, 80);
+  }
+  function part(tg) {
+    if (tg.id === 'p1' || tg.id === 'p2') return '';
+    return tg.closest('#p2') ? 'Part 2 › ' : tg.closest('#p1') ? 'Part 1 › ' : '';
+  }
+  var watch = new MutationObserver(function (muts) {
+    muts.forEach(function (m) {
+      var tg = m.target;
+      if (!tg.classList.contains('cur') || /\bcur\b/.test(m.oldValue || '')) return;
+      gtag('event', 'page_view', {
+        page_title: 'Alpaca › ' + part(tg) + title(tg),
+        page_location: location.origin + '/section/' + tg.id
+      });
+    });
+  });
+  document.querySelectorAll('.tg').forEach(function (tg) {
+    watch.observe(tg, { attributes: true, attributeFilter: ['class'], attributeOldValue: true });
+  });
+})();
+</script>
 </body>
 </html>
