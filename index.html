@@ -707,57 +707,6 @@ if (/(^|\.)kamelnabil\.com$/.test(location.hostname)) {
   });
 })();
 </script>
-<script>
-/* Phone alerts: tell kamelnabil.com/api/notify when someone opens this page,
-   then how long they read and how far they got when they leave it.
-   Visiting once with ?notrack switches alerts off on that browser (for Kamel). */
-(function () {
-  if (location.hostname !== 'alpaca.kamelnabil.com') return;
-  try {
-    if (/[?&]notrack\b/.test(location.search)) localStorage.setItem('kn-notrack', '1');
-    if (localStorage.getItem('kn-notrack')) return;
-    if (sessionStorage.getItem('kn-alerted')) return;
-    sessionStorage.setItem('kn-alerted', '1');
-  } catch (e) {}
-
-  var ENDPOINT = 'https://kamelnabil.com/api/notify';
-  var start = Date.now(), opened = {}, furthest = -1, furthestTitle = '';
-  var toggles = Array.prototype.slice.call(document.querySelectorAll('.tg'));
-  var lastSent = null;
-
-  function send(data) {
-    try { navigator.sendBeacon(ENDPOINT, JSON.stringify(data)); } catch (e) {}
-  }
-  function titleOf(tg) {
-    var t = tg.querySelector(':scope > .tg-h .tg-t');
-    return (t ? t.textContent : tg.id).replace(/\s+/g, ' ').trim().slice(0, 80);
-  }
-
-  new MutationObserver(function (muts) {
-    muts.forEach(function (m) {
-      var tg = m.target;
-      if (!tg.classList.contains('cur')) return;
-      opened[tg.id] = true;
-      var i = toggles.indexOf(tg);
-      if (i > furthest) { furthest = i; furthestTitle = titleOf(tg); }
-    });
-  }).observe(document.body, { subtree: true, attributes: true, attributeFilter: ['class'] });
-
-  send({ type: 'open', ref: document.referrer });
-
-  // Report progress when the tab is hidden or closed: always the first time,
-  // then only if they read further or stayed at least another minute.
-  function progress() {
-    var secs = Math.round((Date.now() - start) / 1000);
-    if (lastSent && furthest <= lastSent.furthest && secs - lastSent.secs < 60) return;
-    lastSent = { secs: secs, furthest: furthest };
-    send({ type: 'progress', secs: secs, sections: Object.keys(opened).length, furthest: furthestTitle });
-  }
-  document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === 'hidden') progress();
-  });
-  window.addEventListener('pagehide', progress);
-})();
-</script>
+<script src="https://kamelnabil.com/notify.js" defer></script>
 </body>
 </html>
